@@ -376,7 +376,7 @@
 	# fifo for all interfaces = auto
 	# compressed packets for all interfaces = auto
 	# frames, collisions, carrier counters for all interfaces = auto
-	# disable by default interfaces matching = lo fireqos* *-ifb
+	disable by default interfaces matching = {{ netdata_disable_by_default_interfaces_matching|join(' ') }}
 	# filename to monitor = /proc/net/dev
 
 [plugin:proc:/proc/net/dev:enp0s8]
